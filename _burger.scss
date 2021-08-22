@@ -1,0 +1,17 @@
+.burger {
+    width: 26px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    @include tablets {
+        display: inline-flex;
+    }
+}
+
+.burger__plank {
+    display: block;
+    background: $black;
+    height: 4px;
+    border-radius: 10px;
+}

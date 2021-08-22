@@ -1,0 +1,57 @@
+.fixed-menu {
+    position: fixed;
+    top: 12%;
+    right: 2%;
+    @include tablets {
+        display: none;
+    }
+}
+
+.fixed-menu__item {
+    margin-bottom: rem(5px);
+}
+
+.fixed-menu__link {
+    width: rem(14px);
+    height: rem(14px);
+    border-radius: 50%;
+    border: rem(1px) solid transparent;
+    display: block;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: rem(6px);
+        height: rem(6px);
+        border-radius: 50%;
+        background: #292929;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:hover {
+        border-color: #e01f3d;
+    }
+    &.active {
+        border-color: #e01f3d;
+        &::before {
+            background: #e01f3d;
+        }
+    }
+    &.shadowed-active {
+        border-color: #fff;
+        &::before {
+            background: #fff;
+        }
+    }
+    &.shadowed {
+        &:hover {
+            border-color: #fff;
+        }
+        &:before {
+            background: #fff;
+        }
+    }
+}

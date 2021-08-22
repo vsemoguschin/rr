@@ -1,0 +1,50 @@
+//ПЕРЕМЕННЫЕ
+$containerWidth: 915px;
+$baseFontSize: 16px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//COLORS
+$red: #e01f3d;
+$darkRed: #ca1b36;
+$black: #292929;
+$gray: #666666;
+$bggrey: #F5F5F5;
+
+@import "_media";
+
+//normalize
+// @import url(../css/normalize.css);
+
+
+// fonts
+//&display=swap&subset=cyrillic-ext
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,500,500italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Play:regular,700&display=swap&subset=cyrillic-ext);
+
+@import "_layout";
+@import "_section";
+@import "_hero";
+@import "_header";
+@import "_burger";
+@import "_team";
+@import "_menu";
+@import "_features";
+@import "_feature";
+@import "_btn";
+
+@import "_headline";
+@import "_benefits";
+@import "_product";
+@import "_benefit";
+@import"_reviews";
+@import"_interactive-avatar";
+@import"_player";
+@import"_forms";
+@import"_radio";
+@import"_footer";
+@import"_fixed-menu";
+@import"_fullmenu";
+

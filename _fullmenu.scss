@@ -1,0 +1,38 @@
+.fullmenu-section {
+    background-color: #333537;   
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: -5000px;
+    transition: .5s;
+    display: none;
+    @include tablets{
+        display: block;
+    }
+    &.active{
+        right: 0;
+
+    }
+    @include phones{
+        display: block;
+    }
+}
+
+.fullmenu__list{
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 135px;
+}
+.fullmenu__link{
+    text-decoration: none;
+}
+.close-icon{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 42px;
+    top: 42px;
+}
+
+

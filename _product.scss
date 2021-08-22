@@ -1,0 +1,258 @@
+.products__slider {
+    width: 95%;
+    // display: flex;
+    overflow: hidden;
+    // margin-left: 40px;
+    margin: 0 auto;
+    .bx-wrapper {
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+    }
+}
+
+.slider__arrow {
+    position: absolute;
+    width: 14px;
+    top: 55%;
+    transform: translateY(-50%);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    z-index: 2;
+    @include tablets {
+        top: 26%;
+        margin: 0px 20% 0;
+    }
+    @include tablets {
+        top: 26%;
+        margin: 0px 20% 0;
+    }
+}
+
+.slider-icon {
+    width: 15px;
+    height: 32px;
+    stroke: black;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+.arrow__right {
+    right: 0px;
+}
+
+.slider__list {
+    position: relative;
+    display: -webkit-box;
+    // overflow: hidden;
+    display: flex;
+    width: 100%;
+    // flex-flow: row-reverse;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.slider__item {
+    display: flex;
+    // flex-shrink: 0; //чтобы элемент не сжимался
+    width: 100%;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.product__img {
+    min-width: 45%;
+    // width: 452px;
+    // height: 452px;
+    margin-right: 59px;
+    // padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        width: 306px;
+        height: 306px;
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 49px;
+    }
+    @include tablets {
+        width: 306px;
+        height: 306px;
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 26px;
+    }
+}
+
+.product__prewiev {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.product__ingridients {
+    height: 91px;
+    width: 91px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+    &:hover > .ingr__list {
+        display: flex;
+    }
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
+}
+.gear {
+    height: 91px;
+    width: 91px;
+}
+
+.ingr__list {
+    width: 273px;
+    height: 294px;
+    // background-color: rgba(139, 74, 74, 0.06);
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(40px);
+    color: black;
+    font-size: 16px;
+    position: relative;
+    display: none;
+    justify-content: space-between;
+    padding: 26px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: -273px;
+    z-index: 10;
+}
+.ingr__list-item {
+    color: $black;
+    font-size: 16px;
+    padding-right: 75px;
+}
+
+.ingr__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ingr__icons {
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icons__item {
+    width: 32px;
+    height: 32px;
+}
+
+.ingr__par {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product__title {
+    font-family: "play";
+    font-size: 36px;
+    font-weight: bold;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    @include tablets {
+        margin-bottom: 14px;
+        font-size: 28px;
+    }
+    @include phones {
+        margin-bottom: 13px;
+        font-size: 28px;
+    }
+}
+
+.product__sub-desc {
+    margin-bottom: 27px;
+    @include tablets {
+        width: 100%;
+        margin-bottom: 27px;
+    }
+    @include phones {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.product__property {
+    display: flex;
+    margin-bottom: 24px;
+    @include tablets {
+        justify-content: center;
+        font-size: 18px;
+    }
+    @include phones {
+        justify-content: center;
+        font-size: 18px;
+    }
+}
+
+.property__item-bold {
+    color: black;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.property__item {
+    width: 60px;
+    margin-right: 80px;
+    text-align: left;
+    @include tablets {
+        margin-right: 94px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include phones {
+        margin-right: 86px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.product__order {
+    display: flex;
+    @include tablets {
+        justify-content: center;
+    }
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.product__price {
+    font-family: "play";
+    font-size: 36px;
+    color: #151515;
+    margin-right: 12px;
+    padding-top: 5px;
+    white-space: nowrap;
+    @include tablets {
+    }
+    @include phones {
+    }
+}

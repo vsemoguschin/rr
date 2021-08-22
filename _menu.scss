@@ -1,0 +1,127 @@
+.menu-section {
+    background-image: url(../img/acc-bg.png);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    min-height: rem(652px);
+    color: #fff;
+}
+
+.menu__title {
+    position: absolute; //чтобы меню не зависело от остальных элементов
+    top: 10%;
+    left: 10%;
+    color: #fff;
+}
+
+.menu-acco {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end; // прижимаем элементы к правому краю чтобы они переполнялись влево
+}
+
+.menu-acco__item {
+    display: flex;
+    // visibility: visible;
+    &.active {
+        // .menu-acco__trigger-text{
+        //     // color: #fff  меняет цвет текста в span
+        // }
+
+        .menu-acco__content {
+            width: 550px;
+            transition: width 0.4s, color 0.4s 0.3s;
+            @include phones {
+                transition: color 0.4s 0.3s;
+            }
+        }
+    }
+}
+
+.menu-acco__item.active {
+    @include phones {
+        flex-shrink: 0; //чтобы контент не сжимался
+        order: 1; // чтобы элемент становился последним
+        width: 100%; //занял всю ширину
+    }
+    & .menu-acco__text {
+        opacity: 1;
+        transition: 0.3s;
+        transition-delay: 0.4s;
+    }
+}
+
+.hidden {
+    @include phones {
+        right: -9999px;
+        position: absolute;
+    }
+}
+
+.none {
+    @include phones {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.menu-acco__trigger {
+    width: rem(88px);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background: #999;
+
+    // @include tablets;
+    // text-decoration: none;
+    // position: relative;
+
+    @include phones {
+        width: rem(58px);
+    }
+}
+
+.menu-acco__trigger-text {
+    font-size: rem(48px);
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+}
+
+.menu-acco__content {
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    background: #333537e5;
+    transition: width 0.4s;
+    position: relative;
+
+    @include phones {
+        transition: none;
+    }
+}
+.menu-acco__text {
+    width: 100%;
+    position: relative;
+    padding: 72px 30px 0;
+    line-height: 24px;
+    opacity: 0;
+}
+
+.close-btn {
+    position: absolute;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    right: 6%;
+    top: 3%;
+}

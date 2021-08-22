@@ -1,0 +1,62 @@
+.section{
+    height: 100%;
+    min-height: rem(652px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #666666;
+    position: relative;
+}
+
+.section__title{
+    font-size:rem(48px);
+    color: #292929;
+    font-family: "play";
+    font-weight: bold;
+    margin-bottom: rem(53px);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.order-section{
+    position: relative;
+    background: url(../img/decor/orderbg.png) center;
+    background-size: cover;
+    color: #fff;
+    .section__title{
+        color:inherit;
+    }
+}
+
+.benefits-section{
+    position: relative;
+
+    &:before {
+        content: url(../img/decor/dec2.svg);
+        position: absolute;
+        left: 14%;
+        bottom: rem(-14px);
+        z-index: 2;
+    }
+}
+
+.products-section {
+    background-color: #F8FAF9;
+}
+
+.reviews-section{
+    &::before {
+        content: url(../img/decor/dec1.svg);
+        position: absolute;
+        left: 15%;
+        bottom: rem(-19px);
+        z-index: 1;
+    }
+}
+.map-section{
+    height: 100vh;
+    #map{
+        height: 100%;
+        width: 100%;
+    }
+}

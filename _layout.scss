@@ -1,0 +1,95 @@
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Alegreya Sans";
+    color: $gray;
+    line-height: 1.42;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    &.body_closed{
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    // min-height: 100%;
+    height: 100%; // жесткая высота для one page scrol
+    overflow: hidden;
+    .maincontent {
+        height: 100%; // чтобы использовать transform: translateY()
+        // transform: translateY(); // этим свойством скролить окна
+        transition: transform 1s; // плавность скрола
+        will-change: transform;
+    }
+}
+
+.container {
+    width: 95%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    position: relative;
+}
+
+//tag styles reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

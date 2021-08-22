@@ -1,0 +1,105 @@
+.reviews__display {
+    background: #f8faf9;
+    padding: rem(45px) rem(40px) rem(45px) rem(43px);
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: rem(83px);
+        height: rem(83px);
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: rem(-65px);
+    }
+    @include tablets {
+        padding-bottom: rem(32px);
+    }
+}
+
+.reviews__list{
+    position: relative;
+    min-height: 280px;
+}
+
+.reviews__item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: .3s;
+    opacity: 0;
+    &.active{
+        position: static; //чтобы растянуть контейнер по размерам
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+.reviews__display-inner {
+    display: flex;
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.reviews__avatar {
+    width: rem(253px);
+    height: rem(264px);
+    @include tablets {
+        width: rem(130px);
+        height: rem(130px);
+        margin-bottom: 32px;
+    }
+}
+
+.reviews__avatar-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews__content {
+    flex: 1;
+    margin-left: rem(38px);
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+.reviews__title {
+    font-size: rem(24px);
+    font-weight: bold;
+    font-family: "play";
+    margin-bottom: rem(32px);
+    color: #292929;
+}
+
+.reviews__text {
+    margin-bottom: rem(60px);
+    width: 80%;
+    @include tablets{
+        width: 100%;
+        margin-bottom: rem(16px);
+    }
+}
+
+.reviews__author {
+    font-size: rem(18px);
+    font-weight: bold;
+    font-family: "play";
+    color: #292929;
+}
+
+.reviews__switcher {
+    display: flex;
+    justify-content: center;
+}

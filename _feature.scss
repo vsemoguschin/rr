@@ -1,0 +1,16 @@
+.feature {
+    display: flex;
+}
+
+.feature__icon{
+    width: rem(41px);
+    height: rem(41px);
+    margin-right: rem(7px);
+}
+
+.feature__text {
+    font-size: rem(16px);
+    color: #292929;
+    font-family: "play";
+    max-width: rem(120px);
+}
